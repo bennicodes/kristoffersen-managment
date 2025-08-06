@@ -1,0 +1,53 @@
+:root {
+  /* Brand Colors */
+  --color-primary: #ffffff;
+  --color-secondary: #1a1a1a;
+  --color-accent: #ff0055;
+
+  /* Backgrounds */
+  --bg-main: #0a0a0a;
+  --bg-secondary: #1a1a1a;
+  --bg-light: #2a2a2a;
+
+  /* Text */
+  --text-main: #ffffff;
+  --text-secondary: #bbbbbb;
+  --text-muted: #888888;
+
+  /* Borders */
+  --border-color: #333333;
+
+  /* Fonts */
+  --font-body: "Inter", sans-serif;
+  --font-heading: "Bebas Neue", sans-serif;
+
+  /* Font Sizes */
+  --text-extra-small: 0.75rem;
+  --text-small: 0.875rem;
+  --text-base: 1rem;
+  --text-large: 1.25rem;
+  --text-extra-large: 1.5rem;
+  --text-2x-large: 2rem;
+  --text-3x-large: 3rem;
+
+  /* Spacing (written out) */
+  --spacing-extra-extra-small: 0.25rem;
+  --spacing-extra-small: 0.5rem;
+  --spacing-small: 1rem;
+  --spacing-medium: 1.5rem;
+  --spacing-large: 2rem;
+  --spacing-extra-large: 3rem;
+  --spacing-extra-extra-large: 4rem;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease-in-out;
+  --transition-slow: 0.4s ease-in-out;
+
+  /* Z-index levels */
+  --z-header: 100;
+  --z-modal: 1000;
+
+  /* Shadows */
+  --shadow-default: 0 2px 10px rgba(0, 0, 0, 0.3);
+  --shadow-hover: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
