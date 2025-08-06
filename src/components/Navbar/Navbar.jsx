@@ -67,28 +67,33 @@ const Navbar = () => {
                 className={({ isActive }) => (isActive ? styles.active : "")}
                 to="/"
               >
-                Hjem
+                Home
               </NavLink>
             </li>
             <li>
               <NavLink
                 className={({ isActive }) => (isActive ? styles.active : "")}
-                to="/tjenester"
+                to="/clients"
               >
-                Tjenester
+                Clients
               </NavLink>
             </li>
             <li>
               <NavLink
                 className={({ isActive }) => (isActive ? styles.active : "")}
-                to="/om-oss"
+                to="/media"
               >
-                Om oss
+                Media
               </NavLink>
             </li>
             <li>
-              <NavLink to="/kontakt" className={styles.contactLink}>
-                Kontakt oss
+              <NavLink to="/about" className={styles.contactLink}>
+                About us
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact" className={styles.contactLink}>
+                Contact
               </NavLink>
             </li>
           </ul>
