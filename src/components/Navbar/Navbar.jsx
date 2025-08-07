@@ -17,43 +17,7 @@ const Navbar = () => {
       <div className={styles.navbar}>
         <div className={styles.logoContainer}>
           <Link to="/" className={styles.logoLink}>
-            <i>
-              <svg
-                className={styles.logo}
-                viewBox="0 0 400 150"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <defs>
-                  <linearGradient
-                    id="pareoGradient"
-                    x1="0%"
-                    y1="0%"
-                    x2="100%"
-                    y2="0%"
-                  >
-                    <stop offset="0%" stopColor="#2563eb" />
-                    <stop offset="100%" stopColor="#0f172a" />
-                  </linearGradient>
-                </defs>
-
-                <path
-                  d="M 10 90 Q 80 30, 200 90 Q 320 150, 390 90 Q 320 30, 200 90 Q 80 150, 10 90 Z"
-                  fill="url(#pareoGradient)"
-                />
-
-                <text
-                  x="200"
-                  y="105"
-                  fontFamily="Inter, sans-serif"
-                  fontWeight="700"
-                  fontSize="42"
-                  fill="#ffffff"
-                  textAnchor="middle"
-                >
-                  Pareo
-                </text>
-              </svg>
-            </i>
+            LOGO
           </Link>
         </div>
         <nav>
@@ -87,12 +51,18 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/about" className={styles.contactLink}>
+              <NavLink
+                to="/about"
+                className={({ isActive }) => (isActive ? styles.active : "")}
+              >
                 About us
               </NavLink>
             </li>
             <li>
-              <NavLink to="/contact" className={styles.contactLink}>
+              <NavLink
+                to="/contact"
+                className={({ isActive }) => (isActive ? styles.active : "")}
+              >
                 Contact
               </NavLink>
             </li>

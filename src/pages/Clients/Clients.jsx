@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import Navbar from "../../components/navbar/Navbar";
 
 const Clients = () => {
   return (
-    <div>Clients</div>
-  )
-}
+    <div>
+      <header>
+        <Navbar />
+      </header>
+    </div>
+  );
+};
 
-export default Clients
+export default Clients;

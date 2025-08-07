@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import Navbar from "../../components/navbar/Navbar";
 
 const Media = () => {
   return (
-    <div>Media</div>
-  )
-}
+    <div>
+      <header>
+        <Navbar />
+      </header>
+    </div>
+  );
+};
 
-export default Media
+export default Media;
