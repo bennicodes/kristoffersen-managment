@@ -1,0 +1,23 @@
+.rootContainer {
+  background-color: var(--background-main);
+  color: var(--text-main);
+  min-height: 100vh;
+}
+
+.visionSection,
+.teamSection {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  text-align: center;
+  font-size: var(--text-large);
+  line-height: 1.6;
+}
+
+.visionSection h2,
+.teamSection h2 {
+  font-family: var(--font-heading);
+  font-size: var(--text-2x-large);
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}

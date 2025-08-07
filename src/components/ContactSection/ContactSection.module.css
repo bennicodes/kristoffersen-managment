@@ -1,0 +1,132 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contactSection {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--background-main);
+  color: var(--text-main);
+  padding: var(--spacing-extra-large) var(--spacing-medium);
+  font-family: var(--font-body);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn var(--transition-slow);
+}
+
+.contactWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-large);
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.infoSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+  padding-right: var(--spacing-medium);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.contactTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-3x-large);
+  letter-spacing: 2px;
+  margin-bottom: var(--spacing-small);
+}
+
+.bio {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.services {
+  margin-top: var(--spacing-small);
+  color: var(--text-main);
+  padding-left: var(--spacing-small);
+}
+
+.services li {
+  margin-bottom: var(--spacing-extra-small);
+}
+
+.availability {
+  margin-top: var(--spacing-medium);
+  font-size: var(--text-small);
+  color: var(--text-secondary);
+}
+
+.contactDetails {
+  margin-top: var(--spacing-small);
+  font-size: var(--text-base);
+}
+
+.contactDetails a {
+  color: var(--text-main);
+  text-decoration: underline;
+  transition: color var(--transition-fast);
+}
+
+.contactDetails a:hover {
+  color: var(--color-accent);
+}
+
+.socials {
+  margin-top: var(--spacing-small);
+  display: flex;
+  gap: var(--spacing-small);
+}
+
+.socials a {
+  color: var(--text-main);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.socials a:hover {
+  color: var(--color-accent);
+}
+
+.mapContainer {
+  flex: 1;
+  min-height: 400px;
+  border-radius: var(--border-radius-medium);
+  overflow: hidden;
+  box-shadow: var(--shadow-default);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 768px) {
+  .contactWrapper {
+    flex-direction: column;
+  }
+
+  .infoSection {
+    padding-right: 0;
+  }
+
+  .mapContainer {
+    min-height: 300px;
+  }
+}
