@@ -18,7 +18,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: var(--z-header);
+  z-index: 1;
 }
 
 /* Logo */

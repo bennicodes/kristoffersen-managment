@@ -18,7 +18,7 @@ button {
   /* Brand Colors */
   --color-primary: #ffffff;
   --color-secondary: #1a1a1a;
-  --color-accent: #ff0055;
+  --color-error: #ff0055;
 
   /* Backgrounds */
   --background-main: #0a0a0a;

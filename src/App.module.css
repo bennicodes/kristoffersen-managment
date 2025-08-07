@@ -77,12 +77,14 @@
   box-shadow: 0 0 16px 2px gray;
 }
 
-/* Animation */
-@keyframes glideBorder {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 300% 50%;
-  }
+.contactSection {
+  width: 100%;
+  padding: var(--spacing-extra-extra-large);
+}
+
+.contactHeading {
+  color: var(--text-main);
+  font-family: var(--font-heading);
+  letter-spacing: 2px;
+  font-size: var(--text-2x-large);
 }
