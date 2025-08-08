@@ -1,7 +1,44 @@
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Caret animation */
+@keyframes typing {
+  from {
+    width: 0ch;
+    border-right: 3px solid var(--text-main);
+  }
+  to {
+    width: 42ch;
+    border-right: none;
+  }
+}
+
+@keyframes blinkCaret {
+  50% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: var(--text-main);
+  }
+}
+
 .rootContainer {
+  min-width: 375px;
   width: 100%;
   min-height: 100vh;
   background-color: var(--background-main);
+  overflow-x: hidden;
+}
+
+.container {
+  animation: fadeSlideIn 0.8s ease forwards;
 }
 
 .header {
@@ -9,6 +46,38 @@
   height: 700px;
   display: flex;
   flex-direction: column;
+}
+
+/* .heading {
+  width: 100%;
+  color: var(--text-main);
+  margin-top: 48px;
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: var(--text-3x-large);
+  letter-spacing: 8px;
+  position: absolute;
+  z-index: 1;
+} */
+.heading {
+  color: var(--text-main);
+  margin-top: 48px;
+  font-family: var(--font-heading);
+  font-size: var(--text-3x-large);
+  letter-spacing: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid var(--text-main);
+  width: 0ch; /* initial width must match animation */
+  animation: typing 4s steps(42, end) forwards;
+  display: inline-block;
+}
+
+.headingWrapper {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
 }
 
 .picContainer {
@@ -38,19 +107,6 @@
   );
 }
 
-.heading {
-  width: 100%;
-  color: var(--text-main);
-  margin-top: 48px;
-  text-align: center;
-  font-family: var(--font-heading);
-  font-size: var(--text-3x-large);
-  letter-spacing: 8px;
-  position: absolute;
-
-  z-index: 1;
-}
-
 .buttonContainer {
   width: 100%;
   height: 100%;
@@ -77,12 +133,32 @@
   box-shadow: 0 0 16px 2px gray;
 }
 
-/* Animation */
-@keyframes glideBorder {
-  0% {
-    background-position: 0% 50%;
+.contactSection {
+  width: 100%;
+  padding: var(--spacing-extra-extra-large);
+}
+
+.contactHeading {
+  color: var(--text-main);
+  font-family: var(--font-heading);
+  letter-spacing: 2px;
+  font-size: var(--text-2x-large);
+}
+
+.contactDescription {
+  max-width: 50%;
+  color: var(--text-main);
+  padding: var(--spacing-medium) 0;
+  font-family: var(--font-body);
+}
+
+/* Media screen */
+@media screen and (max-width: 768px) {
+  .contactSection {
+    padding: var(--spacing-extra-extra-large) var(--spacing-medium);
   }
-  100% {
-    background-position: 300% 50%;
+  .contactDescription {
+    max-width: 100%;
+    padding-right: var(--spacing-small);
   }
 }

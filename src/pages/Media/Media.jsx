@@ -1,9 +1,9 @@
-import React from "react";
 import Navbar from "../../components/navbar/Navbar";
+import styles from "./Media.module.css";
 
 const Media = () => {
   return (
-    <div>
+    <div className={styles.rootContainer}>
       <header>
         <Navbar />
       </header>
