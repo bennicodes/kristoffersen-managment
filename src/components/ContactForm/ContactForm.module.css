@@ -182,3 +182,10 @@
   color: var(--color-error);
   animation: shake 0.3s ease;
 }
+
+/* Media screen */
+@media screen and (max-width: 768px) {
+  .formContainer {
+    padding: var(--spacing-large) 0;
+  }
+}
