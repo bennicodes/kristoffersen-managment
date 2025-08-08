@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const defaultTitle = "Pareo – Nettsider som gjør inntrykk";
+const defaultTitle = "Kristoffersen MGMT";
 
 export const usePageTitle = (title) => {
   useEffect(() => {

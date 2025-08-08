@@ -79,7 +79,7 @@
   align-items: center;
   justify-content: center;
   border: none;
-  padding: var(--spacing-small);
+  padding: 12px;
   z-index: 10;
   transition: var(--transition-fast);
 }
@@ -102,7 +102,7 @@
   }
 
   .menuButton {
-    color: var(--text-secondary);
+    color: var(--text-main);
     display: flex;
   }
 
