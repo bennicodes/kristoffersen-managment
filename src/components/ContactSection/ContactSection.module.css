@@ -116,6 +116,12 @@
   display: block;
 }
 
+.loadingCircle {
+  width: 48px;
+  height: 48px;
+  border-top: 0.5rem solid var(--text-main);
+}
+
 /* Responsive Layout */
 @media screen and (max-width: 768px) {
   .contactWrapper {

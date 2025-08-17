@@ -8,6 +8,49 @@
     transform: translateY(0);
   }
 }
+
+.rootContainer {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--background-main);
+  overflow-x: hidden;
+}
+
+.container {
+  animation: fadeSlideIn 0.8s ease forwards;
+}
+
+.header {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.headingWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  left: 50%; /* center horizontally */
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.heading {
+  width: 100%;
+  color: var(--text-main);
+  margin-top: 48px;
+  font-family: var(--font-heading);
+  font-size: var(--text-3x-large);
+  letter-spacing: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid var(--text-main);
+  width: 0ch; /* initial width must match animation */
+  animation: typing 3s steps(42, end) forwards;
+}
 /* Caret animation */
 @keyframes typing {
   from {
@@ -29,51 +72,10 @@
   }
 }
 
-.rootContainer {
-  min-width: 375px;
-  width: 100%;
-  min-height: 100vh;
-  background-color: var(--background-main);
-  overflow-x: hidden;
-}
-
-.container {
-  animation: fadeSlideIn 0.8s ease forwards;
-}
-
-.header {
-  width: 100%;
-  height: 500px;
-  display: flex;
-  flex-direction: column;
-}
-
-.headingWrapper {
-  text-align: center;
-  width: 100%;
-  position: absolute;
-  z-index: 1;
-}
-
-.heading {
-  width: 100%;
-  color: var(--text-main);
-  margin-top: 48px;
-  font-family: var(--font-heading);
-  font-size: var(--text-3x-large);
-  letter-spacing: 5px;
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 3px solid var(--text-main);
-  width: 0ch; /* initial width must match animation */
-  animation: typing 4s steps(42, end) forwards;
-  display: inline-block;
-  text-align: center;
-}
-
 .picContainer {
   width: 100%;
   height: 100%;
+  margin-top: var(--spacing-medium);
   position: relative;
   isolation: isolate;
 }
@@ -95,7 +97,6 @@
 
 .buttonContainer {
   width: 100%;
-  height: 100%;
   display: flex;
   justify-content: center;
   margin-top: 150px;
@@ -146,5 +147,23 @@
   .contactDescription {
     max-width: 100%;
     padding-right: var(--spacing-small);
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .header {
+    height: 300px;
+  }
+  .heading {
+    font-size: var(--text-2x-large);
+    animation: typing 4s steps(20, end) forwards; /* smaller typing width */
+  }
+  .contactHeading {
+    font-size: var(--text-extra-large);
+  }
+  .contactButton {
+    width: 200px;
+    height: 32px;
+    font-size: var(--text-base);
   }
 }

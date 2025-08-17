@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./ContactSection.module.css";
+import Spinner from "../Spinner/Spinner";
 
 const ContactSection = () => {
+  const [mapLoading, setMapLoading] = useState(true);
+
   return (
     <section id="contact" className={styles.contactSection}>
       <div className={styles.contactWrapper}>
@@ -37,6 +40,11 @@ const ContactSection = () => {
         </div>
 
         <div className={styles.mapContainer}>
+          {mapLoading && (
+            <div className={styles.mapLoader}>
+              <Spinner spinnerClassName={styles.loadingCircle} />
+            </div>
+          )}
           <iframe
             title="Google Maps - Oslo"
             className={styles.map}
@@ -44,6 +52,7 @@ const ContactSection = () => {
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
+            onLoad={() => setMapLoading(false)}
           ></iframe>
         </div>
       </div>
