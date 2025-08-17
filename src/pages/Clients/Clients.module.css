@@ -2,4 +2,131 @@
   width: 100%;
   min-height: 100vh;
   background-color: var(--background-main);
+  color: var(--text-main);
+  font-family: var(--font-heading);
+}
+
+.main {
+  height: 100%;
+  padding: var(--spacing-extra-large);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: var(--text-2x-large);
+  margin-bottom: var(--spacing-large);
+  letter-spacing: 2px;
+  text-align: center;
+
+  /* typing animation */
+  overflow: hidden;
+  white-space: nowrap;
+  width: 7ch;
+  margin-left: auto;
+  margin-right: auto; /* keeps heading centered */
+  animation: typingClients 0.75s steps(7, end) forwards,
+    blinkCaretClients 0.75s step-end 3;
+  border-right: 3px solid var(--text-main);
+}
+
+/* Caret animation */
+@keyframes typingClients {
+  from {
+    width: 0ch;
+    border-right: 3px solid var(--text-main);
+  }
+  to {
+    width: 7ch;
+    border-right: none;
+  }
+}
+
+@keyframes blinkCaretClients {
+  50% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: var(--text-main);
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-large);
+  justify-items: center;
+}
+
+.card {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  border-radius: var(--border-radius-large);
+  overflow: hidden;
+  box-shadow: var(--shadow-default);
+}
+
+.image {
+  width: 100%;
+  display: block;
+  border-radius: var(--border-radius-large);
+  transition: transform var(--transition-slow);
+}
+
+.imageWrapper:hover .image {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-small);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.imageWrapper:hover .overlay {
+  opacity: 1;
+}
+
+.overlay a {
+  background: var(--background-secondary);
+  padding: var(--spacing-small) var(--spacing-medium);
+  border-radius: var(--border-radius-medium);
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: bold;
+  transition: background var(--transition-fast);
+}
+
+.overlay a:hover {
+  background: transparent;
+  cursor: pointer;
+}
+.overlay a:last-child {
+  margin-top: var(--spacing-small);
+  background: var(--color-primary);
+  color: var(--background-main);
+}
+.overlay a:last-child:hover {
+  background: transparent;
+  color: var(--text-main);
+}
+
+.name {
+  margin-top: var(--spacing-small);
+  font-size: var(--text-large);
+  letter-spacing: 1px;
 }
