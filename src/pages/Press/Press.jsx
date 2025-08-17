@@ -1,12 +1,10 @@
 import ArtistPress from "../../components/ArtistPress/ArtistPress";
 import Navbar from "../../components/navbar/Navbar";
-import { usePageTitle } from "../../hooks/usePageTitles";
-import styles from "./Clients.module.css";
+import styles from "./Press.module.css";
 
-const Clients = () => {
-  usePageTitle("Clients - Kristoffersen MGMT");
+const Press = () => {
   return (
-    <div className={styles.rootContainer}>
+    <div className={styles.container}>
       <header>
         <Navbar />
       </header>
@@ -17,4 +15,4 @@ const Clients = () => {
   );
 };
 
-export default Clients;
+export default Press;
