@@ -49,24 +49,8 @@
 
 .bio {
   font-size: var(--text-base);
-  color: var(--text-secondary);
-  line-height: 1.7;
-}
-
-.services {
-  margin-top: var(--spacing-small);
   color: var(--text-main);
-  padding-left: var(--spacing-small);
-}
-
-.services li {
-  margin-bottom: var(--spacing-extra-small);
-}
-
-.availability {
-  margin-top: var(--spacing-medium);
-  font-size: var(--text-small);
-  color: var(--text-secondary);
+  line-height: 1.7;
 }
 
 .contactDetails {

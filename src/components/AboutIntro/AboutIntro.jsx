@@ -40,17 +40,19 @@ const AboutIntro = () => {
             100,000 streams on Spotify.
           </p>
 
-          <h2>Our Team</h2>
+          <h2>Our Artist: SAUL</h2>
           <p>
-            Our team consists of experienced professionals dedicated to
-            nurturing talent and building meaningful careers in music.
+            SAUL is a Norwegian Pop/R&amp;B artist based in Oslo, known for
+            songs like <em>UTÅLMODIG</em>, <em>KRANGLER I PARIS</em>, and{" "}
+            <em>VESTKANTTALK</em>. 2025 is just the beginning — we have several
+            exciting projects lined up in the coming months.
           </p>
         </div>
 
         <div className={styles.imageContainer}>
           <img
             src="/assets/images/SAUL-bw.jpeg"
-            alt="Dennis Kiil"
+            alt="SAUL"
             className={styles.image}
           />
         </div>

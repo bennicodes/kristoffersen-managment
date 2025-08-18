@@ -1,9 +1,24 @@
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .rootContainer {
   width: 100%;
   min-height: 100vh;
   background-color: var(--background-main);
   color: var(--text-main);
   font-family: var(--font-heading);
+}
+
+.container {
+  animation: fadeSlideIn 0.8s ease forwards;
 }
 
 .main {

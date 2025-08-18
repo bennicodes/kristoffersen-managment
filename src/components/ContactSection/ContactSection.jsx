@@ -15,19 +15,6 @@ const ContactSection = () => {
             collaborations, don’t hesitate to reach out.
           </p>
 
-          <ul className={styles.services}>
-            <li>🎵 Booking og artist management</li>
-            <li>📍 Lokasjon- og eventplanlegging</li>
-            <li>🎤 DJ-sett og live-opptredener</li>
-            <li>🤝 Samarbeid og partnerskap</li>
-          </ul>
-
-          <div className={styles.availability}>
-            <h4>Available</h4>
-            <p>Mon – Fri: 10:00 – 18:00</p>
-            <p>Weekend: By appointment</p>
-          </div>
-
           <div className={styles.contactDetails}>
             <h3>Sebastian Kristoffersen</h3>
             <p>Artist Manager</p>
