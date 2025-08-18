@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Navbar from "../../components/navbar/Navbar";
 import clients from "../../data/clients";
 import { usePageTitle } from "../../hooks/usePageTitles";
@@ -37,13 +38,7 @@ const Clients = () => {
                   >
                     Spotify
                   </a>
-                  <a
-                    href={client.spotify}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    See more
-                  </a>
+                  <Link to={`/clients/${client.slug}`}>See more</Link>
                 </div>
               </div>
               <h2 className={styles.name}>{client.name}</h2>

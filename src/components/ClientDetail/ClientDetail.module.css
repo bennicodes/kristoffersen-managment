@@ -1,0 +1,113 @@
+.rootContainer {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--background-main);
+  color: var(--text-main);
+  font-family: var(--font-body);
+}
+
+.main {
+  padding: var(--spacing-extra-large);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: var(--text-3x-large);
+  margin-bottom: var(--spacing-large);
+  text-align: center;
+}
+
+/* --- New layout for top section --- */
+.topSection {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-large);
+  align-items: flex-start;
+  margin-bottom: var(--spacing-extra-large);
+}
+
+.leftColumn {
+  flex: 1;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+}
+
+.rightColumn {
+  flex: 2;
+}
+
+/* --- Image + Bio --- */
+.image {
+  width: 100%;
+  max-width: 300px;
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--shadow-default);
+}
+
+.bio {
+  text-align: left;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* --- Spotify / Insta Embeds --- */
+.spotifyEmbed {
+  border-radius: var(--border-radius-medium);
+  min-height: 80px;
+  min-width: 300px;
+}
+
+.embeds {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-large);
+  margin-top: var(--spacing-extra-large);
+}
+
+.embedBlock h2 {
+  font-family: var(--font-heading);
+  font-size: var(--text-extra-large);
+  margin-bottom: var(--spacing-small);
+  text-align: center;
+}
+
+.instagramEmbed {
+  border-radius: var(--border-radius-medium);
+  background: var(--background-light);
+}
+
+/* --- Back link --- */
+.backLink {
+  display: inline-block;
+  margin-bottom: var(--spacing-large);
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color var(--transition-fast);
+}
+
+.backLink:hover {
+  color: var(--text-muted);
+}
+
+.loadingCircle {
+  width: 32px;
+  height: 32px;
+  border-top: 0.25rem solid var(--text-main);
+}
+
+/* --- Responsive layout --- */
+@media (max-width: 768px) {
+  .topSection {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bio {
+    text-align: center;
+  }
+}

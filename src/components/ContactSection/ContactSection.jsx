@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import styles from "./ContactSection.module.css";
 import Spinner from "../Spinner/Spinner";
+import styles from "./ContactSection.module.css";
 
 const ContactSection = () => {
   const [mapLoading, setMapLoading] = useState(true);
@@ -9,11 +9,10 @@ const ContactSection = () => {
     <section id="contact" className={styles.contactSection}>
       <div className={styles.contactWrapper}>
         <div className={styles.infoSection}>
-          <h2 className={styles.contactTitle}>Kontakt Oss</h2>
+          <h2 className={styles.contactTitle}>Contact Us</h2>
           <p className={styles.bio}>
-            Kiil Management drives av Dennis Kiil – en dedikert musikkentusiast
-            med lang fartstid i bransjen. Vi samarbeider med artister, klubber
-            og eventbyråer for å skape unike opplevelser og sterke relasjoner.
+            If you have any questions regarding events, bookings, or
+            collaborations, don’t hesitate to reach out.
           </p>
 
           <ul className={styles.services}>
@@ -24,18 +23,22 @@ const ContactSection = () => {
           </ul>
 
           <div className={styles.availability}>
-            <h4>Tilgjengelighet</h4>
-            <p>Mandag – Fredag: 10:00 – 18:00</p>
-            <p>Helg: Etter avtale</p>
+            <h4>Available</h4>
+            <p>Mon – Fri: 10:00 – 18:00</p>
+            <p>Weekend: By appointment</p>
           </div>
 
           <div className={styles.contactDetails}>
+            <h3>Sebastian Kristoffersen</h3>
+            <p>Artist Manager</p>
             <p>
               Email:{" "}
-              <a href="mailto:booking@kiilmgmt.com">booking@kiilmgmt.com</a>
+              <a href="mailto:sebastian@kristoffersenmgmt.no">
+                sebastian@kristoffersenmgmt.no
+              </a>
             </p>
-            <p>Telefon: +47 999 99 999</p>
-            <p>Lokasjon: Oslo, Norway</p>
+            <p>Mobile: +47 91511981</p>
+            <p>Location: Oslo, Norway</p>
           </div>
         </div>
 
