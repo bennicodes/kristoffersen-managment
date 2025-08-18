@@ -85,7 +85,6 @@
   overflow: hidden;
   border-radius: var(--border-radius-xl);
   box-shadow: var(--shadow-default);
-  cursor: pointer;
   transition: transform var(--transition-slow);
 }
 
@@ -98,7 +97,6 @@
     rgba(0, 0, 0, 0.3) 0%,
     rgba(0, 0, 0, 0.6) 100%
   );
-  pointer-events: none;
   transition: background var(--transition-slow);
   border-radius: var(--border-radius-xl);
 }
@@ -109,23 +107,6 @@
   border-radius: var(--border-radius-xl);
   object-fit: cover;
   transition: transform var(--transition-slow);
-}
-
-.imageContainer:hover {
-  transform: scale(1.05);
-  box-shadow: var(--shadow-hover);
-}
-
-.imageContainer:hover::after {
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.15) 0%,
-    rgba(0, 0, 0, 0.35) 100%
-  );
-}
-
-.imageContainer:hover .image {
-  transform: scale(1.1);
 }
 
 @media (max-width: 700px) {

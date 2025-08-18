@@ -66,21 +66,20 @@ const ClientDetail = () => {
 
         <div className={styles.embeds}>
           <div className={styles.embedBlock}>
-            <h2>Latest Instagram Post</h2>
+            <h2>Instagram</h2>
 
             {instagramLoading && (
               <Spinner spinnerClassName={styles.loadingCircle} />
             )}
-            <iframe
-              src={client.instagramEmbed}
-              width="100%"
-              height="500"
-              frameBorder="0"
-              scrolling="no"
-              allowTransparency={true}
-              className={styles.instagramEmbed}
-              onLoad={() => setInstagramLoading(false)}
-            ></iframe>
+            <div className={styles.instagramContainer}>
+              <iframe
+                src={client.instagramEmbed}
+                frameBorder="0"
+                scrolling="no"
+                className={styles.instagramEmbed}
+                onLoad={() => setInstagramLoading(false)}
+              ></iframe>
+            </div>
           </div>
         </div>
       </main>

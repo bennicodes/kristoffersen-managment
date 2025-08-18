@@ -9,6 +9,8 @@ const Clients = () => {
 
   return (
     <div className={styles.rootContainer}>
+      <div className={styles.container}>
+
       <header>
         <Navbar />
       </header>
@@ -46,6 +48,7 @@ const Clients = () => {
           ))}
         </div>
       </main>
+      </div>
     </div>
   );
 };

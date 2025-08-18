@@ -6,8 +6,8 @@ const clients = [
     instagram: "https://www.instagram.com/saulandree/",
     spotify: "https://open.spotify.com/artist/5IllKMkLRxFoaA33dGTq5J",
     latestSong: "https://open.spotify.com/embed/artist/5IllKMkLRxFoaA33dGTq5J", // Spotify embed
-    instagramEmbed: "https://www.instagram.com/p/saulandree/embed", // Insta embed
-    bio: "SAUL is a Norwegian Pop/R&B artist based in Oslo, known for songs like UTÅLMODIG, KRANGLER I PARIS, and VESTKANTTALK. 2025 is just the beginning — we have several exciting projects lined up in the coming months.",
+    instagramEmbed: "https://www.instagram.com/p/DJRbUSgKaE-/embed", // Insta embed
+    bio: "Artist description goes here... Artist description goes here...Artist description goes here... Artist description goes here... Artist description goes here...Artist description goes here... Artist description goes here... Artist description goes here...Artist description goes here... Artist description goes here... Artist description goes here...Artist description goes here... Artist description goes here... Artist description goes here...Artist description goes here... Artist description goes here... Artist description goes here...Artist description goes here... Artist description goes here... Artist description goes here...Artist description goes here... Artist description goes here... Artist description goes here...Artist description goes here...",
   },
   // Later, just add more clients here...
 ];
