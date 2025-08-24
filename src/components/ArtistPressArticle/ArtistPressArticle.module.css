@@ -1,0 +1,185 @@
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pressSection {
+  position: relative;
+  padding: var(--spacing-extra-large) var(--spacing-medium);
+  color: var(--text-main);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+  background-image: url("/assets/images/saul-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.4);
+  z-index: -1;
+}
+
+/* Typing effect */
+@keyframes typing {
+  from {
+    width: 0ch;
+    border-right: 3px solid var(--text-main);
+  }
+  to {
+    width: var(--title-ch, 32ch); /* fallback width */
+    border-right: none;
+  }
+}
+
+@keyframes blinkCaret {
+  50% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: var(--text-main);
+  }
+}
+
+.heading {
+  font-family: var(--font-heading);
+  font-size: var(--text-2x-large);
+  margin-bottom: var(--spacing-large);
+  text-align: center;
+  letter-spacing: 2px;
+  color: var(--text-main);
+}
+
+.pressList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--spacing-large);
+}
+
+.pressCard {
+  font-family: var(--font-body);
+  position: relative;
+  display: flex;
+  gap: var(--spacing-medium);
+  padding: var(--spacing-medium);
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--shadow-default);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  background-color: var(--background-secondary);
+  transition: transform var(--transition-slow),
+    box-shadow var(--transition-slow);
+  overflow: hidden;
+}
+
+.pressCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* text (left by default) */
+.cardBody {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  order: 1; /* always left on desktop */
+}
+
+/* image (right by default) */
+.media {
+  flex: 0 0 260px;
+  aspect-ratio: 4 / 3;
+  background: transparent;
+  border-radius: var(--border-radius-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  order: 2; /* always right on desktop */
+}
+
+.mediaImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: var(--border-radius-medium);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: var(--text-large);
+  letter-spacing: 1px;
+  margin-bottom: var(--spacing-extra-small);
+  color: var(--color-primary);
+}
+
+.source {
+  font-size: var(--text-small);
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-extra-small);
+}
+
+.date {
+  font-size: var(--text-small);
+  color: var(--text-muted);
+  margin-bottom: var(--spacing-small);
+}
+
+.description {
+  font-size: var(--text-base);
+  color: var(--text-main);
+  line-height: 1.6;
+  margin-top: var(--spacing-extra-small);
+  margin-bottom: var(--spacing-small);
+}
+
+/* keep button pinned at bottom of cardBody */
+.readMore {
+  align-self: flex-start;
+  margin-top: auto;
+  padding: var(--spacing-extra-small) var(--spacing-medium);
+  font-size: var(--text-small);
+  font-weight: 600;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--border-radius-medium);
+  text-decoration: none;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.readMore:hover {
+  background: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+/* responsive */
+@media screen and (max-width: 768px) {
+  .pressSection {
+    padding: var(--spacing-large);
+  }
+  .heading {
+    font-size: var(--text-extra-large);
+  }
+  .pressCard {
+    flex-direction: column; /* stack vertically */
+  }
+
+  /* stack: image first, text second */
+  .media {
+    order: 1;
+    width: 100%;
+    flex-basis: auto;
+    aspect-ratio: 16 / 9;
+  }
+  .cardBody {
+    order: 2;
+  }
+}

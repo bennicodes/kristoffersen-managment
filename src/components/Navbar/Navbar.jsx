@@ -1,16 +1,34 @@
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, NavLink } from "react-router";
 import Button from "../Button/Button";
 import styles from "./Navbar.module.css";
 
 const Navbar = () => {
   const [isMenuActive, setIsMenuActive] = useState(false);
+  const menuRef = useRef(null);
 
   const handleMenuToggle = () => {
     setIsMenuActive((prev) => !prev);
   };
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (
+        isMenuActive &&
+        menuRef.current &&
+        !menuRef.current.contains(e.target)
+      ) {
+        setIsMenuActive(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isMenuActive]);
 
   return (
     <div className={styles.navbarContainer}>
@@ -20,7 +38,7 @@ const Navbar = () => {
             LOGO
           </Link>
         </div>
-        <nav>
+        <nav ref={menuRef}>
           <ul
             className={`${styles.navLinks} ${
               isMenuActive ? styles.navLinksActive : ""

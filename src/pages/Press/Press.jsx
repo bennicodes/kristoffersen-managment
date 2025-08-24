@@ -1,4 +1,4 @@
-import ArtistPress from "../../components/ArtistPress/ArtistPress";
+import ArtistPress from "../../components/ArtistPressArticle/ArtistPressArticle";
 import Navbar from "../../components/navbar/Navbar";
 import styles from "./Press.module.css";
 
