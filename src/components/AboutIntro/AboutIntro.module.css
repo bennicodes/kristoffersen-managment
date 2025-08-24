@@ -38,14 +38,14 @@
 
   overflow: hidden;
   white-space: nowrap;
-  width: fit-content;
+  width: 0ch; /* typing starts at 0 */
   animation: typing 2s steps(30, end) forwards, blinkCaret 0.75s step-end 3;
 }
 
 /* Caret animation */
 @keyframes typing {
   from {
-    width: 0;
+    width: 0ch;
     border-right: 3px solid var(--text-main);
   }
   to {
@@ -72,7 +72,7 @@
 }
 
 .text p {
-  font-size: var(--text-large);
+  font-size: var(--text-base);
   line-height: 1.6;
   color: var(--text-secondary);
 }
@@ -86,6 +86,7 @@
   border-radius: var(--border-radius-xl);
   box-shadow: var(--shadow-default);
   transition: transform var(--transition-slow);
+  max-width: 100%; /* prevent overflow */
 }
 
 .imageContainer::after {
@@ -104,19 +105,34 @@
 .image {
   max-width: 100%;
   max-height: 550px;
+  width: 100%;
+  height: auto;
   border-radius: var(--border-radius-xl);
   object-fit: cover;
   transition: transform var(--transition-slow);
 }
 
+/* Mobile/tablet adjustments */
 @media (max-width: 700px) {
   .content {
     flex-direction: column;
     text-align: center;
   }
 
+  .text h1 {
+    white-space: normal;  /* allow wrapping */
+    width: 100%;
+    animation: none;      /* disable typing on very small screens */
+  }
+
   .imageContainer {
+    max-width: 100%;
     max-height: 350px;
     margin-top: var(--spacing-large);
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
   }
 }

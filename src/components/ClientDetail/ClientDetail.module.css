@@ -124,6 +124,10 @@
   .bio {
     text-align: center;
   }
+
+  .instagramContainer {
+    padding: 0 var(--spacing-large);
+  }
   .instagramEmbed {
     max-width: 100%; /* let it stretch on mobile */
     min-height: 500px; /* slightly smaller for phones */
