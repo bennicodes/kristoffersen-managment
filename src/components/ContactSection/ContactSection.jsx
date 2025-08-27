@@ -15,18 +15,33 @@ const ContactSection = () => {
             collaborations, don’t hesitate to reach out.
           </p>
 
-          <div className={styles.contactDetails}>
+          <ul className={styles.contactDetails}>
             <h3>Sebastian Kristoffersen</h3>
-            <p>Artist Manager</p>
-            <p>
+            <li>Artist Manager</li>
+            <li>
               Email:{" "}
               <a href="mailto:sebastian@kristoffersenmgmt.no">
                 sebastian@kristoffersenmgmt.no
               </a>
-            </p>
-            <p>Mobile: +47 91511981</p>
-            <p>Location: Oslo, Norway</p>
-          </div>
+            </li>
+            <li>Mobile: +47 91511981</li>
+            <li>
+              <a
+                href="https://www.instagram.com/sebastiankristoffersen/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.socialLink}
+              >
+                <img
+                  src="/assets/images/instagram-round.png"
+                  alt="Instagram logo"
+                  className={styles.instagramLogo}
+                />
+                <p className={styles.instagramHandle}>sebastiankristoffersen</p>
+              </a>
+            </li>
+            <li>Location: Oslo, Norway</li>
+          </ul>
         </div>
 
         <div className={styles.mapContainer}>

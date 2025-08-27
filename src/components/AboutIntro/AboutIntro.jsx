@@ -51,7 +51,7 @@ const AboutIntro = () => {
 
         <div className={styles.imageContainer}>
           <img
-            src="/assets/images/SAUL-bw.jpeg"
+            src="/assets/media/saul/SAUL-bw.jpeg"
             alt="SAUL"
             className={styles.image}
           />

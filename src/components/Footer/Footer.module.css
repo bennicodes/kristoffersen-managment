@@ -1,0 +1,113 @@
+.footer {
+  width: 100%;
+  background: var(--background-main);
+  color: var(--text-main);
+  border-top: 1px solid var(--background-light);
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--spacing-extra-large) var(--spacing-medium);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-large);
+}
+
+.heading {
+  font-family: var(--font-heading);
+  letter-spacing: 2px;
+  font-size: var(--text-large);
+  margin-bottom: var(--spacing-small);
+  color: var(--color-primary);
+}
+.socialHeading {
+  padding-right: var(--spacing-extra-large);
+}
+
+.list,
+.quickLinks,
+.socialList {
+  display: grid;
+  gap: var(--spacing-extra-small);
+}
+
+.list li,
+.quickLinks li,
+.socialList li {
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  color: var(--text-secondary);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast), opacity var(--transition-fast);
+}
+
+a:hover {
+  color: var(--text-main);
+  opacity: 0.9;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-small);
+}
+.instagramHandle:hover {
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  -webkit-background-clip: text; /* Safari + Chrome */
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+}
+.instagramLogo {
+  width: 32px;
+}
+
+.copyrightSection {
+  text-align: center;
+}
+
+.copy {
+  color: var(--text-muted);
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  margin-bottom: var(--spacing-small);
+}
+
+.socialSection {
+  text-align: right;
+}
+
+.socialList {
+  justify-content: end;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .socialSection,
+  .copyrightSection {
+    text-align: center;
+  }
+
+  .socialList {
+    justify-content: center;
+  }
+  .socialHeading {
+    padding-right: 0;
+  }
+}

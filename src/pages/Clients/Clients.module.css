@@ -24,6 +24,7 @@
 .main {
   height: 100%;
   padding: var(--spacing-extra-large);
+  flex-grow: 1;
 }
 
 .title {

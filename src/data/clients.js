@@ -2,7 +2,7 @@ const clients = [
   {
     name: "Saul",
     slug: "saul",
-    image: "/assets/images/SAUL.jpg", // update path if needed
+    image: "/assets/media/saul/SAUL.jpg", // update path if needed
     instagram: "https://www.instagram.com/saulandree/",
     spotify: "https://open.spotify.com/artist/5IllKMkLRxFoaA33dGTq5J",
     latestSong: "https://open.spotify.com/embed/artist/5IllKMkLRxFoaA33dGTq5J", // Spotify embed

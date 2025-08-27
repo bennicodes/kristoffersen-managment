@@ -120,6 +120,10 @@
   box-shadow: 0 0 16px 2px gray;
 }
 
+main{
+  flex-grow: 1;
+}
+
 .contactSection {
   width: 100%;
   padding: var(--spacing-extra-extra-large);

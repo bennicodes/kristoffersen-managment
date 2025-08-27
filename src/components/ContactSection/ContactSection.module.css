@@ -11,10 +11,9 @@
 
 .contactSection {
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
   background-color: var(--background-main);
   color: var(--text-main);
-  padding: var(--spacing-extra-large) var(--spacing-medium);
   font-family: var(--font-body);
   display: flex;
   justify-content: center;
@@ -74,25 +73,39 @@
   color: var(--text-secondary);
 }
 
-.socials {
-  margin-top: var(--spacing-small);
-  display: flex;
+.socialLink {
+  display: inline-flex;
+  align-items: center;
   gap: var(--spacing-small);
 }
-
-.socials a {
-  color: var(--text-main);
-  text-decoration: none;
-  transition: var(--transition-fast);
+.socialLink a:hover {
+  color: transparent;
 }
 
-.socials a:hover {
-  color: var(--color-accent);
+.contactDetails a.socialLink {
+  text-decoration: none;
+}
+
+.instagramHandle:hover {
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  -webkit-background-clip: text; /* Safari + Chrome */
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+}
+.instagramLogo {
+  width: 32px;
 }
 
 .mapContainer {
   flex: 1;
-  min-height: 400px;
+  max-height: 400px;
   border-radius: var(--border-radius-medium);
   overflow: hidden;
   box-shadow: var(--shadow-default);

@@ -3,6 +3,7 @@ import Navbar from "../../components/navbar/Navbar";
 import clients from "../../data/clients";
 import { usePageTitle } from "../../hooks/usePageTitles";
 import styles from "./Clients.module.css";
+import Footer from "../../components/Footer/Footer";
 
 const Clients = () => {
   usePageTitle("Clients - Kristoffersen MGMT");
@@ -49,6 +50,7 @@ const Clients = () => {
         </div>
       </main>
       </div>
+      <Footer/>
     </div>
   );
 };
