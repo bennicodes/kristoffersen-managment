@@ -129,7 +129,6 @@
 
 .overlay a:hover {
   background: transparent;
-  cursor: pointer;
 }
 .overlay a:last-child {
   margin-top: var(--spacing-small);
