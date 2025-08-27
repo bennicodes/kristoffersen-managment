@@ -35,7 +35,6 @@
   font-size: var(--text-2x-large);
   margin-bottom: var(--spacing-small);
   letter-spacing: 5px;
-
   overflow: hidden;
   white-space: nowrap;
   width: 0ch; /* typing starts at 0 */

@@ -1,5 +1,101 @@
-.rootContainer {
-  width: 100%;
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* sticky footer layout */
+.root {
   min-height: 100vh;
-  background-color: var(--background-main);
+  background: var(--background-main);
+  display: flex;
+  flex-direction: column;
+}
+.main {
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-extra-large);
+  animation: fadeSlideIn 0.8s ease forwards;
+}
+.title {
+  /* margin: 0 0 var(--spacing-large); */
+  margin-bottom: var(--spacing-large);
+  color: var(--text-main);
+  text-align: center;
+  letter-spacing: 2px;
+  font-family: var(--font-heading);
+
+  /* typing animation */
+  overflow: hidden;
+  white-space: nowrap;
+  width: 7ch;
+  margin-left: auto;
+  margin-right: auto; /* keeps heading centered */
+  animation: typingClients 0.75s steps(7, end) forwards,
+    blinkCaretClients 0.75s step-end 3;
+  border-right: 3px solid var(--text-main);
+}
+/* Caret animation */
+@keyframes typingClients {
+  from {
+    width: 0ch;
+    border-right: 3px solid var(--text-main);
+  }
+  to {
+    width: 7ch;
+    border-right: none;
+  }
+}
+
+@keyframes blinkCaretClients {
+  50% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: var(--text-main);
+  }
+}
+
+/* Masonry-style columns: big, clean, auto-flow */
+.grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  column-count: 2; /* two big columns by default */
+  column-gap: var(--spacing-medium);
+}
+@media (max-width: 800px) {
+  .grid {
+    column-count: 1;
+  } /* single column on mobile */
+}
+@media (min-width: 1400px) {
+  .grid {
+    column-count: 3;
+  } /* optional: 3 cols on very wide screens */
+}
+
+/* Keep each tile intact within the column flow */
+.item {
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: var(--spacing-medium);
+}
+
+/* Media styles (shared aesthetics) */
+.mediaImg,
+.mediaVideo {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--border-radius-medium);
+  box-shadow: var(--shadow-default);
+  background: #000; /* nice backdrop for videos/letterboxing */
 }

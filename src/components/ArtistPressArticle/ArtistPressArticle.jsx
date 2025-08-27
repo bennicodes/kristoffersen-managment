@@ -33,7 +33,7 @@ const ArtistPressArticle = () => {
   return (
     <section className={styles.pressSection}>
       <div className={styles.background}></div>
-      <h2 className={styles.heading}>Press</h2>
+      <h1 className={styles.heading}>Press</h1>
 
       <div className={styles.pressList}>
         {pressItems.map((item) => (

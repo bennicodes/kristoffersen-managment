@@ -3,6 +3,7 @@ import AboutIntro from "../../components/AboutIntro/AboutIntro";
 import Navbar from "../../components/navbar/Navbar";
 import { usePageTitle } from "../../hooks/usePageTitles";
 import styles from "./About.module.css";
+import Footer from "../../components/Footer/Footer";
 
 const About = () => {
   usePageTitle("About - Kristoffersen MGMT");
@@ -14,6 +15,7 @@ const About = () => {
       <main>
         <AboutIntro />
       </main>
+      <Footer />
     </div>
   );
 };

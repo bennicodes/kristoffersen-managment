@@ -1,4 +1,5 @@
-import ArtistPress from "../../components/ArtistPressArticle/ArtistPressArticle";
+import ArtistPressArticle from "../../components/ArtistPressArticle/ArtistPressArticle";
+import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/navbar/Navbar";
 import styles from "./Press.module.css";
 
@@ -9,8 +10,9 @@ const Press = () => {
         <Navbar />
       </header>
       <main>
-        <ArtistPress />
+        <ArtistPressArticle />
       </main>
+      <Footer />
     </div>
   );
 };

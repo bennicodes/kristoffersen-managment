@@ -27,34 +27,43 @@
   z-index: -1;
 }
 
-/* Typing effect */
-@keyframes typing {
+.heading {
+  margin: 0 0 var(--spacing-large);
+  color: var(--text-main);
+  text-align: center;
+  letter-spacing: 2px;
+  font-family: var(--font-heading);
+  font-size: var(--text-2x-large);
+
+  /* typing animation */
+  overflow: hidden;
+  white-space: nowrap;
+  width: 7ch;
+  margin-left: auto;
+  margin-right: auto; /* keeps heading centered */
+  animation: typingClients 0.5s steps(5, end) forwards,
+    blinkCaretClients 0.5s step-end 3;
+  border-right: 3px solid var(--text-main);
+}
+/* Caret animation */
+@keyframes typingClients {
   from {
     width: 0ch;
     border-right: 3px solid var(--text-main);
   }
   to {
-    width: var(--title-ch, 32ch); /* fallback width */
+    width: 7ch;
     border-right: none;
   }
 }
 
-@keyframes blinkCaret {
+@keyframes blinkCaretClients {
   50% {
     border-color: transparent;
   }
   100% {
     border-color: var(--text-main);
   }
-}
-
-.heading {
-  font-family: var(--font-heading);
-  font-size: var(--text-2x-large);
-  margin-bottom: var(--spacing-large);
-  text-align: center;
-  letter-spacing: 2px;
-  color: var(--text-main);
 }
 
 .pressList {
@@ -119,6 +128,15 @@
   letter-spacing: 1px;
   margin-bottom: var(--spacing-extra-small);
   color: var(--color-primary);
+}
+
+@keyframes blinkCaretClients {
+  50% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: var(--text-main);
+  }
 }
 
 .source {
