@@ -173,6 +173,13 @@
   color: var(--color-secondary);
 }
 
+.noPressMessage {
+  margin: auto;
+  padding-top: var(--spacing-extra-large);
+  font-size: var(--text-base);
+  font-family: var(--font-body);
+}
+
 /* responsive */
 @media screen and (max-width: 768px) {
   .pressSection {

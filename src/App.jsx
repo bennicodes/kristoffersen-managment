@@ -18,7 +18,6 @@ const App = () => {
           <div className={styles.headerContainer}>
             <div className={styles.picContainer}>
               <div className={styles.headingWrapper}>
-                {/* <h1 className={styles.heading}>Kristoffersen MGMT</h1> */}
                 <img
                   src="/assets/images/logo.jpg"
                   alt="Company logo"

@@ -41,7 +41,7 @@ const ArtistPressArticle = () => {
 
       <div className={styles.pressList}>
         {pressItems.length === 0 ? (
-          <p className={styles.noPress}>No press items available.</p>
+          <p className={styles.noPressMessage}>No press items available.</p>
         ) : (
           pressItems.map((item) => (
             <article key={item._id} className={styles.pressCard}>
