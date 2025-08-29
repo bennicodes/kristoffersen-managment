@@ -64,7 +64,7 @@
 
 .text h2 {
   font-family: var(--font-heading);
-  font-size: var(--text-2x-large);
+  font-size: var(--text-extra-large);
   margin-top: var(--spacing-large);
   margin-bottom: var(--spacing-small);
   letter-spacing: 3px;
@@ -82,7 +82,7 @@
   display: flex;
   justify-content: center;
   overflow: hidden;
-  border-radius: var(--border-radius-xl);
+  border-radius: var(--border-radius-medium);
   box-shadow: var(--shadow-default);
   transition: transform var(--transition-slow);
   max-width: 100%; /* prevent overflow */
@@ -98,7 +98,7 @@
     rgba(0, 0, 0, 0.6) 100%
   );
   transition: background var(--transition-slow);
-  border-radius: var(--border-radius-xl);
+  border-radius: var(--border-radius-medium);
 }
 
 .image {
@@ -106,8 +106,9 @@
   max-height: 550px;
   width: 100%;
   height: auto;
-  border-radius: var(--border-radius-xl);
+  border-radius: var(--border-radius-medium);
   object-fit: cover;
+  object-position: top;
   transition: transform var(--transition-slow);
 }
 
@@ -119,9 +120,9 @@
   }
 
   .text h1 {
-    white-space: normal;  /* allow wrapping */
+    white-space: normal; /* allow wrapping */
     width: 100%;
-    animation: none;      /* disable typing on very small screens */
+    animation: none; /* disable typing on very small screens */
   }
 
   .imageContainer {

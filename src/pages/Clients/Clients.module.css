@@ -142,6 +142,6 @@
 
 .name {
   margin-top: var(--spacing-small);
-  font-size: var(--text-large);
+  font-size: var(--text-extra-large);
   letter-spacing: 1px;
 }

@@ -88,11 +88,6 @@
   overflow: hidden;
 }
 
-.pressCard:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-hover);
-}
-
 /* text (left by default) */
 .cardBody {
   flex: 1 1 auto;
