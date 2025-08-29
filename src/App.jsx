@@ -12,20 +12,27 @@ const App = () => {
 
   return (
     <div className={styles.rootContainer}>
+      <Navbar />
       <div className={styles.container}>
         <header className={styles.header}>
-          <Navbar />
-          <div className={styles.picContainer}>
-            <div className={styles.headingWrapper}>
-              <h1 className={styles.heading}>Kristoffersen MGMT</h1>
-            </div>
-            <div className={styles.buttonContainer}>
-              <Button
-                classname={styles.contactButton}
-                onClick={handleScrollToContact}
-              >
-                Book a call
-              </Button>
+          <div className={styles.headerContainer}>
+            <div className={styles.picContainer}>
+              <div className={styles.headingWrapper}>
+                {/* <h1 className={styles.heading}>Kristoffersen MGMT</h1> */}
+                <img
+                  src="/assets/images/logo.jpg"
+                  alt="Company logo"
+                  className={styles.logo}
+                />
+              </div>
+              <div className={styles.buttonContainer}>
+                <Button
+                  classname={styles.contactButton}
+                  onClick={handleScrollToContact}
+                >
+                  Book a call
+                </Button>
+              </div>
             </div>
           </div>
         </header>

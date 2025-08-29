@@ -23,7 +23,6 @@
   animation: fadeSlideIn 0.8s ease forwards;
 }
 .title {
-  /* margin: 0 0 var(--spacing-large); */
   margin-bottom: var(--spacing-large);
   color: var(--text-main);
   text-align: center;

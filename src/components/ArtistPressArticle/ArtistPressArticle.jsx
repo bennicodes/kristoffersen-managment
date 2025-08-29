@@ -7,7 +7,8 @@ const ArtistPressArticle = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const query = `*[_type == "press"] | order(date desc){
+      try {
+        const query = `*[_type == "press"] | order(date desc){
          _id,
         title,
         date,
@@ -15,8 +16,11 @@ const ArtistPressArticle = () => {
         link,
         "image": image.asset->url
       }`;
-      const data = await client.fetch(query);
-      setPressItems(data);
+        const data = await client.fetch(query);
+        setPressItems(data);
+      } catch (error) {
+        console.error("Failed to fetch press items:", error);
+      }
     };
     fetchData();
   }, []);
@@ -36,39 +40,43 @@ const ArtistPressArticle = () => {
       <h1 className={styles.heading}>Press</h1>
 
       <div className={styles.pressList}>
-        {pressItems.map((item) => (
-          <article key={item._id} className={styles.pressCard}>
-            <div className={styles.cardBody}>
-              <h3 className={styles.title}>{item.title}</h3>
-              {item.source && (
-                <p className={styles.source}>Source: {item.source}</p>
-              )}
-              <p className={styles.date}>{formatDate(item.date)}</p>
+        {pressItems.length === 0 ? (
+          <p className={styles.noPress}>No press items available.</p>
+        ) : (
+          pressItems.map((item) => (
+            <article key={item._id} className={styles.pressCard}>
+              <div className={styles.cardBody}>
+                <h3 className={styles.title}>{item.title}</h3>
+                {item.source && (
+                  <p className={styles.source}>Source: {item.source}</p>
+                )}
+                <p className={styles.date}>{formatDate(item.date)}</p>
 
-              {item.link && (
-                <a
-                  href={item.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.readMore}
-                >
-                  Read More →
-                </a>
-              )}
-            </div>
-
-            {item.image && (
-              <div className={styles.media}>
-                <img
-                  src={item.image}
-                  alt="Article image"
-                  className={styles.mediaImg}
-                  loading="lazy"
-                />
+                {item.link && (
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.readMore}
+                  >
+                    Read More →
+                  </a>
+                )}
               </div>
-            )}
-          </article>
-        ))}
+
+              {item.image && (
+                <div className={styles.media}>
+                  <img
+                    src={item.image}
+                    alt="Article image"
+                    className={styles.mediaImg}
+                    loading="lazy"
+                  />
+                </div>
+              )}
+            </article>
+          ))
+        )}
       </div>
     </section>
   );
