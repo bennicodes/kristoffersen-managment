@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import clients from "../../data/clients";
+import Footer from "../Footer/Footer";
 import Navbar from "../navbar/Navbar";
 import Spinner from "../Spinner/Spinner";
 import styles from "./ClientDetail.module.css";
@@ -83,6 +84,7 @@ const ClientDetail = () => {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };
