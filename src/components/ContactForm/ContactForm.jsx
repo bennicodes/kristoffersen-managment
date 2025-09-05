@@ -173,7 +173,11 @@ const ContactForm = () => {
           <p className={styles.successMessage}>{successMessage}</p>
           <p className={styles.errorMessage}>{errorMessage}</p>
           <Button classname={styles.submitButton} type="submit">
-            {isLoading ? <Spinner /> : "Send"}
+            {isLoading ? (
+              <Spinner spinnerClassName={styles.loadingCircle} />
+            ) : (
+              "Send"
+            )}
           </Button>
         </div>
       </form>

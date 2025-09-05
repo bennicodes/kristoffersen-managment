@@ -81,7 +81,7 @@
 .inputWrapper textarea {
   height: 150px;
   resize: vertical;
-  font-size: var(--text-small);
+  font-size: var(--text-base);
   padding: var(--spacing-small);
 }
 
@@ -169,6 +169,12 @@
 .submitButton:active {
   transform: scale(0.98);
   transition: transform 0.1s ease;
+}
+
+.loadingCircle{
+  width: 32px;
+  height: 32px;
+  border-top: 0.5rem solid var(--border-color);
 }
 
 .successMessage {
