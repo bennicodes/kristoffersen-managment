@@ -114,21 +114,3 @@ main {
     padding-right: var(--spacing-small);
   }
 }
-
-@media screen and (max-width: 660px) {
-  .header {
-    height: 300px;
-  }
-  .heading {
-    font-size: var(--text-2x-large);
-    animation: typing 4s steps(20, end) forwards; /* smaller typing width */
-  }
-  .contactHeading {
-    font-size: var(--text-extra-large);
-  }
-  .contactButton {
-    width: 200px;
-    height: 32px;
-    font-size: var(--text-base);
-  }
-}
