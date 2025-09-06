@@ -67,17 +67,6 @@
   margin: 0;
 
   column-count: 2; /* two big columns by default */
-  column-gap: var(--spacing-medium);
-}
-@media (max-width: 800px) {
-  .grid {
-    column-count: 1;
-  } /* single column on mobile */
-}
-@media (min-width: 1400px) {
-  .grid {
-    column-count: 3;
-  } /* optional: 3 cols on very wide screens */
 }
 
 /* Keep each tile intact within the column flow */
@@ -85,7 +74,7 @@
   break-inside: avoid;
   -webkit-column-break-inside: avoid;
   page-break-inside: avoid;
-  margin-bottom: var(--spacing-medium);
+  margin-bottom: var(--spacing-extra-large);
 }
 
 /* Media styles (shared aesthetics) */
@@ -97,4 +86,38 @@
   border-radius: var(--border-radius-medium);
   box-shadow: var(--shadow-default);
   background: #000; /* nice backdrop for videos/letterboxing */
+  object-fit: contain;
+}
+
+/* Landscape images → span full width */
+.mediaImg.landscape {
+  column-span: all;
+  -webkit-column-span: all;
+}
+
+/* Videos → always full width */
+.mediaVideo {
+  column-span: all; /* modern browsers */
+  -webkit-column-span: all; /* Safari/WebKit fallback */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  /* Limit tall/portrait images */
+  .mediaImg {
+    max-height: 80vh;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 800px) {
+  .grid {
+    column-count: 1;
+  } /* single column on mobile */
+}
+
+@media (min-width: 1400px) {
+  .grid {
+    column-count: 3;
+  } /* optional: 3 cols on very wide screens */
 }
