@@ -73,7 +73,7 @@
 }
 
 .pressCard {
-  max-width: 50%;
+  max-width: 100%;
   font-family: var(--font-body);
   position: relative;
   display: flex;
