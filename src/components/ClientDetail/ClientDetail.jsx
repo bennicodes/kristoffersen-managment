@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import clients from "../../data/clients";
 import Footer from "../Footer/Footer";
-import Navbar from "../navbar/Navbar";
+import Navbar from "../Navbar/Navbar";
 import Spinner from "../Spinner/Spinner";
 import styles from "./ClientDetail.module.css";
 
@@ -38,7 +38,7 @@ const ClientDetail = () => {
         <h1 className={styles.title}>{client.name}</h1>
 
         <div className={styles.topSection}>
-          
+
           <div className={styles.leftColumn}>
             <img
               src={client.image}
