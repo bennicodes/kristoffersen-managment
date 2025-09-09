@@ -60,7 +60,7 @@ export default {
       type: 'type',
       media: 'image',
     },
-    prepare({type, media, poster}) {
+    prepare({type, media}) {
       return {
         title: type === 'image' ? 'Image' : 'Video',
         subtitle: type,
