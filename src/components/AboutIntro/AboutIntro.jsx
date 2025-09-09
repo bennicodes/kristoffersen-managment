@@ -43,9 +43,9 @@ const AboutIntro = () => {
           <h2>Our Artist: SAUL</h2>
           <p>
             SAUL is a Norwegian Pop/R&amp;B artist based in Oslo, known for
-            songs like <em>UTÅLMODIG</em>, <em>KRANGLER I PARIS</em>, and{" "}
-            <em>VESTKANTTALK</em>. 2025 is just the beginning — we have several
-            exciting projects lined up in the coming months.
+            songs like <em>UTÅLMODIG</em>, and <em>KRANGLER I PARIS</em>. 2025
+            is just the beginning — we have several exciting projects lined up
+            in the coming months.
           </p>
         </div>
 

@@ -38,6 +38,7 @@ const ClientDetail = () => {
         <h1 className={styles.title}>{client.name}</h1>
 
         <div className={styles.topSection}>
+          
           <div className={styles.leftColumn}>
             <img
               src={client.image}
@@ -61,7 +62,11 @@ const ClientDetail = () => {
           </div>
 
           <div className={styles.rightColumn}>
-            <p className={styles.bio}>{client.bio}</p>
+            {client.bio.map((paragraph, index) => (
+              <p key={index} className={styles.bio}>
+                {paragraph}
+              </p>
+            ))}
           </div>
         </div>
 

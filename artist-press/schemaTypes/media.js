@@ -16,6 +16,12 @@ export default {
       },
       validation: (Rule) => Rule.required(),
     },
+    {
+      name: 'order',
+      title: 'Order',
+      type: 'number',
+      description: 'Controls the display order (lower numbers appear first)',
+    },
 
     /* ---- IMAGE ---- */
     {
@@ -53,13 +59,12 @@ export default {
     select: {
       type: 'type',
       media: 'image',
-      poster: 'poster',
     },
     prepare({type, media, poster}) {
       return {
         title: type === 'image' ? 'Image' : 'Video',
         subtitle: type,
-        media: type === 'image' ? media : poster || media,
+        media,
       }
     },
   },

@@ -32,30 +32,37 @@ export default function Media() {
       <main className={styles.main}>
         <h1 className={styles.title}>Media</h1>
 
-        <div className={styles.grid}>
-          {items.map((it) => (
-            <li key={it._id} className={styles.item}>
-              {it.type === "video" && it.videoSrc ? (
-                <video
-                  className={styles.mediaVideo}
-                  src={it.videoSrc}
-                  controls
-                  preload="metadata"
-                  playsInline
-                />
-              ) : it.imageUrl ? (
-                <img
-                  className={`${styles.mediaImg} ${
-                    it.imageWidth > it.imageHeight ? styles.landscape : ""
-                  }`}
-                  src={it.imageUrl}
-                  alt="picture"
-                  loading="lazy"
-                />
-              ) : null}
-            </li>
-          ))}
-        </div>
+        <ul className={styles.grid}>
+          {items.map((it) => {
+            const isLandscape = it.imageWidth > it.imageHeight;
+            const spanAll = it.type === "video" || isLandscape;
+            return (
+              <li
+                key={it._id}
+                className={`${styles.item} ${spanAll ? styles.spanAll : ""}`}
+              >
+                {it.type === "video" && it.videoSrc ? (
+                  <video
+                    className={styles.mediaVideo}
+                    src={it.videoSrc}
+                    controls
+                    preload="metadata"
+                    playsInline
+                  />
+                ) : it.imageUrl ? (
+                  <img
+                    className={`${styles.mediaImg} ${
+                      it.imageWidth > it.imageHeight ? styles.landscape : ""
+                    }`}
+                    src={it.imageUrl}
+                    alt="picture"
+                    loading="lazy"
+                  />
+                ) : null}
+              </li>
+            );
+          })}
+        </ul>
       </main>
 
       <Footer />
