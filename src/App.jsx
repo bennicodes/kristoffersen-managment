@@ -2,7 +2,7 @@ import styles from "./App.module.css";
 import Button from "./components/Button/Button";
 import ContactForm from "./components/ContactForm/ContactForm";
 import Footer from "./components/Footer/Footer";
-import Navbar from "./components/navbar/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import useScrollToSection from "./hooks/useScrollToSection";
 
 const App = () => {

@@ -1,7 +1,7 @@
 import React from "react";
 import ContactSection from "../../components/ContactSection/ContactSection";
 import Footer from "../../components/Footer/Footer";
-import Navbar from "../../components/navbar/Navbar";
+import Navbar from "../../components/Navbar/Navbar";
 import { usePageTitle } from "../../hooks/usePageTitles";
 import styles from "./Contact.module.css";
 

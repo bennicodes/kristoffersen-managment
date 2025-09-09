@@ -1,6 +1,6 @@
 import React from "react";
 import AboutIntro from "../../components/AboutIntro/AboutIntro";
-import Navbar from "../../components/navbar/Navbar";
+import Navbar from "../../components/Navbar/Navbar";
 import { usePageTitle } from "../../hooks/usePageTitles";
 import styles from "./About.module.css";
 import Footer from "../../components/Footer/Footer";

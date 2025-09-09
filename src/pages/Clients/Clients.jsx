@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
-import Navbar from "../../components/navbar/Navbar";
+import Navbar from "../../components/Navbar/Navbar";
 import clients from "../../data/clients";
 import { usePageTitle } from "../../hooks/usePageTitles";
 import styles from "./Clients.module.css";

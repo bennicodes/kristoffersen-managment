@@ -1,7 +1,7 @@
 // src/pages/Media/Media.jsx
 import { useEffect, useState } from "react";
 import Footer from "../../components/Footer/Footer";
-import Navbar from "../../components/navbar/Navbar";
+import Navbar from "../../components/Navbar/Navbar";
 import { client } from "../../config/sanityConfig";
 // import { mediaItems } from "../../data/mediaItems/saul";
 import { usePageTitle } from "../../hooks/usePageTitles";
