@@ -6,7 +6,7 @@ const clients = [
     instagram: "https://www.instagram.com/saulandree/",
     spotify: "https://open.spotify.com/artist/5IllKMkLRxFoaA33dGTq5J",
     latestSong: "https://open.spotify.com/embed/artist/5IllKMkLRxFoaA33dGTq5J", // Spotify embed
-    instagramEmbed: "https://www.instagram.com/p/DJRbUSgKaE-/embed", // Insta embed
+    instagramEmbed: "https://www.instagram.com/p/DNyFyH62K4y/embed", // Insta embed
     bio: [
       "«Saul er en R&B/rap-artist fra Oslo som startet sin solokarriere i mai 2025 med låten «UTÅLMODIG». Siden har han gitt ut «KRANGLER I PARIS» og dropper snart en ny singel «VESTKANTTALK».",
       "Før han begynte å gi ut egen musikk, var han med og skrev låter for Bølgen – blant annet på albumet «Knust Diamant». Låtene han har vært med på å skrive, har til sammen flere millioner streams.",

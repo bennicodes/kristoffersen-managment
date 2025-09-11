@@ -91,7 +91,7 @@
 .instagramEmbed {
   width: 100%;
   max-width: 425px;
-  min-height: 600px;
+  min-height: 700px;
   border-radius: var(--border-radius-medium);
   background: var(--background-light);
   overflow: hidden;
@@ -130,14 +130,13 @@
   .instagramContainer {
     padding: 0 var(--spacing-large);
   }
-  .instagramEmbed {
-    max-width: 100%; /* let it stretch on mobile */
-    min-height: 500px; /* slightly smaller for phones */
-  }
 }
 
 @media screen and (max-width: 475px) {
   .instagramContainer {
     padding: 0;
+  }
+  .instagramEmbed {
+    min-height: 600px;
   }
 }
