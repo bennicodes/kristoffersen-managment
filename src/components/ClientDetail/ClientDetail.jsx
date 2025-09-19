@@ -19,8 +19,8 @@ const ClientDetail = () => {
         <Navbar />
         <main className={styles.main}>
           <h1 className={styles.title}>Client not found</h1>
-          <Link to="/clients" className={styles.backLink}>
-            ← Back to Clients
+          <Link to="/klienter" className={styles.backLink}>
+            ← Tilbake
           </Link>
         </main>
       </div>
@@ -31,14 +31,13 @@ const ClientDetail = () => {
     <div className={styles.rootContainer}>
       <Navbar />
       <main className={styles.main}>
-        <Link to="/clients" className={styles.backLink}>
-          ← Back to Clients
+        <Link to="/klienter" className={styles.backLink}>
+          ← Tilbake
         </Link>
 
         <h1 className={styles.title}>{client.name}</h1>
 
         <div className={styles.topSection}>
-
           <div className={styles.leftColumn}>
             <img
               src={client.image}

@@ -8,7 +8,7 @@ const Footer = () => {
       <div className={styles.inner}>
         {/* Contact */}
         <section className={styles.contactSection}>
-          <h3 className={styles.heading}>Contact</h3>
+          <h3 className={styles.heading}>Kontakt</h3>
           <ul className={styles.list}>
             <li>
               <a href="mailto:booking@kristoffersenmgmt.com">
@@ -33,7 +33,7 @@ const Footer = () => {
         {/* Social */}
         <section className={styles.socialSection}>
           <h3 className={`${styles.heading} ${styles.socialHeading}`}>
-            Social
+            Sosiale medier
           </h3>
           <ul className={styles.socialList}>
             <li>

@@ -16,13 +16,13 @@ export const router = createBrowserRouter(
     <Route>
       {/* Navbar routing */}
       <Route index element={<App />} />
-      <Route path="/clients" element={<Clients />} />
+      <Route path="/klienter" element={<Clients />} />
       <Route path="/media" element={<Media />} />
-      <Route path="/press" element={<Press />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/contact" element={<Contact />} />
+      <Route path="/presse" element={<Press />} />
+      <Route path="/om-oss" element={<About />} />
+      <Route path="/kontakt" element={<Contact />} />
       {/* Internal routing */}
-      <Route path="/clients/:slug" element={<ClientDetail />} />
+      <Route path="/klienter/:slug" element={<ClientDetail />} />
     </Route>
   )
 );

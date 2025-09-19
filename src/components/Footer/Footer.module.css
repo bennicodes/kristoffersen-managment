@@ -22,7 +22,7 @@
   color: var(--color-primary);
 }
 .socialHeading {
-  padding-right: var(--spacing-extra-large);
+  padding-right: var(--spacing-large);
 }
 
 .list,

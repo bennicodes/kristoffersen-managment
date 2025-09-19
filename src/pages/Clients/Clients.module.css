@@ -37,7 +37,7 @@
   /* typing animation */
   overflow: hidden;
   white-space: nowrap;
-  width: 7ch;
+  width: 9ch;
   margin-left: auto;
   margin-right: auto; /* keeps heading centered */
   animation: typingClients 0.75s steps(7, end) forwards,
@@ -52,7 +52,7 @@
     border-right: 3px solid var(--text-main);
   }
   to {
-    width: 7ch;
+    width: 9ch;
     border-right: none;
   }
 }

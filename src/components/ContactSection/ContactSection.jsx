@@ -9,10 +9,10 @@ const ContactSection = () => {
     <section id="contact" className={styles.contactSection}>
       <div className={styles.contactWrapper}>
         <div className={styles.infoSection}>
-          <h2 className={styles.contactTitle}>Contact Us</h2>
+          <h2 className={styles.contactTitle}>Kontakt oss</h2>
           <p className={styles.bio}>
-            If you have any questions regarding events, bookings, or
-            collaborations, don’t hesitate to reach out.
+            Dersom du har spørsmål om arrangementer, booking eller samarbeid,
+            ikke nøl med å ta kontakt.
           </p>
 
           <ul className={styles.contactDetails}>

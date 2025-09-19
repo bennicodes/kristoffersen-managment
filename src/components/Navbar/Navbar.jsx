@@ -58,16 +58,16 @@ const Navbar = () => {
                   className={({ isActive }) => (isActive ? styles.active : "")}
                   onClick={handleLinkClick}
                 >
-                  Home
+                  Hjem
                 </NavLink>
               </li>
               <li>
                 <NavLink
-                  to="/clients"
+                  to="/klienter"
                   className={({ isActive }) => (isActive ? styles.active : "")}
                   onClick={handleLinkClick}
                 >
-                  Clients
+                  Klienter
                 </NavLink>
               </li>
               <li>
@@ -81,29 +81,29 @@ const Navbar = () => {
               </li>
               <li>
                 <NavLink
-                  to="/press"
+                  to="/presse"
                   className={({ isActive }) => (isActive ? styles.active : "")}
                   onClick={handleLinkClick}
                 >
-                  Press
+                  Presse
                 </NavLink>
               </li>
               <li>
                 <NavLink
-                  to="/about"
+                  to="/om-oss"
                   className={({ isActive }) => (isActive ? styles.active : "")}
                   onClick={handleLinkClick}
                 >
-                  About us
+                  Om oss
                 </NavLink>
               </li>
               <li>
                 <NavLink
-                  to="/contact"
+                  to="/kontakt"
                   className={({ isActive }) => (isActive ? styles.active : "")}
                   onClick={handleLinkClick}
                 >
-                  Contact
+                  Kontakt
                 </NavLink>
               </li>
             </ul>

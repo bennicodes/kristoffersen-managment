@@ -23,36 +23,36 @@ const AboutIntro = () => {
     <section className={styles.container}>
       <div className={styles.content}>
         <div className={styles.text}>
-          <h1>About KRISTOFFERSEN MGMT</h1>
+          <h1>Om KRISTOFFERSEN MGMT</h1>
           <p>
-            Kristoffersen MGMT is a Norwegian management company, founded by
-            Sebastian Kristoffersen. We focus on developing long-term careers
-            for artists, with a hands-on approach and a deep understanding of
-            the music industry.
+            Kristoffersen MGMT er et norsk managementselskap, grunnlagt av
+            Sebastian Kristoffersen. Vi fokuserer på å utvikle langsiktige
+            karrierer for artister, med en praktisk tilnærming og en dyp
+            forståelse av musikkbransjen.
           </p>
 
-          <h2>Our Journey</h2>
+          <h2>Vår reise</h2>
           <p>
-            Sebastian Kristoffersen ({calculateAge()}) began his career in the
-            music business in 2025, alongside his friend and artist SAUL. With a
-            strong start, he successfully signed SAUL to Universal Music Group
-            Norway with the debut single “UTÅLMODIG”, which has now surpassed
-            100,000 streams on Spotify.
+            Sebastian Kristoffersen ({calculateAge()}) startet sin karriere i
+            musikkbransjen i 2025, sammen med sin venn og artist SAUL. Med en
+            sterk start signerte han SAUL til Universal Music Group Norway med
+            debutsingelen «UTÅLMODIG», som nå har passert 100 000 avspillinger
+            på Spotify.
           </p>
 
-          <h2>Our Artist: SAUL</h2>
+          <h2>Vår artist: SAUL</h2>
           <p>
-            SAUL is a Norwegian Pop/R&amp;B artist based in Oslo, known for
-            songs like <em>UTÅLMODIG</em>, <em>KRANGLER I PARIS</em> and{" "}
-            <em>VESTKANTTALK</em>. 2025 is just the beginning — we have several
-            exciting projects lined up in the coming months.
+            SAUL er en norsk Pop/R&amp;B-artist basert i Oslo, kjent for låter
+            som <em>UTÅLMODIG</em>, <em>KRANGLER I PARIS</em> og{" "}
+            <em>VESTKANTTALK</em>. 2025 er bare begynnelsen — vi har flere
+            spennende prosjekter på vei i de kommende månedene.
           </p>
         </div>
 
         <div className={styles.imageContainer}>
           <img
             src="/assets/images/seb-manager.JPG"
-            alt="SAUL"
+            alt="manager sebastian kristoffersen"
             className={styles.image}
           />
         </div>

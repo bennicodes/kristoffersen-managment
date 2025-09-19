@@ -29,7 +29,7 @@ const App = () => {
                   classname={styles.contactButton}
                   onClick={handleScrollToContact}
                 >
-                  Book a call
+                  Book en samtale
                 </Button>
               </div>
             </div>
@@ -37,10 +37,10 @@ const App = () => {
         </header>
         <main>
           <section id="contact" className={styles.contactSection}>
-            <h2 className={styles.contactHeading}>Contact Us</h2>
+            <h2 className={styles.contactHeading}>Kontakt oss</h2>
             <p className={styles.contactDescription}>
-              For business inquiries, collaboration opportunities, or to
-              schedule a call — feel free to get in touch using the form below.
+              For henvendelser, samarbeidsmuligheter eller for å avtale en
+              samtale. Ta kontakt via skjemaet under.
             </p>
             <ContactForm />
           </section>

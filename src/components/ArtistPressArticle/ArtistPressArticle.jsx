@@ -37,18 +37,20 @@ const ArtistPressArticle = () => {
   return (
     <section className={styles.pressSection}>
       <div className={styles.background}></div>
-      <h1 className={styles.heading}>Press</h1>
+      <h1 className={styles.heading}>Presse</h1>
 
       <div className={styles.pressList}>
         {pressItems.length === 0 ? (
-          <p className={styles.noPressMessage}>No press items available.</p>
+          <p className={styles.noPressMessage}>
+            Ingen presseoppslag tilgjengelig.
+          </p>
         ) : (
           pressItems.map((item) => (
             <article key={item._id} className={styles.pressCard}>
               <div className={styles.cardBody}>
                 <h3 className={styles.title}>{item.title}</h3>
                 {item.source && (
-                  <p className={styles.source}>Source: {item.source}</p>
+                  <p className={styles.source}>Kilde: {item.source}</p>
                 )}
                 <p className={styles.date}>{formatDate(item.date)}</p>
 
@@ -59,7 +61,7 @@ const ArtistPressArticle = () => {
                     rel="noopener noreferrer"
                     className={styles.readMore}
                   >
-                    Read More →
+                    Les mer →
                   </a>
                 )}
               </div>

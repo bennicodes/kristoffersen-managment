@@ -58,7 +58,7 @@ const ContactForm = () => {
 
       setErrorMessage("");
       setSuccessMessage(
-        "Thank you for your inquiry! We will get in touch as soon as possible."
+        "Takk for henvendelsen! Vi tar kontakt så snart som mulig."
       );
 
       // Reset form
@@ -70,7 +70,7 @@ const ContactForm = () => {
       });
       setCharacterCount(0);
     } catch {
-      setErrorMessage("Sorry, something went wrong. Please try again later.");
+      setErrorMessage("Beklager, noe gikk galt. Vennligst prøv igjen senere.");
     } finally {
       setIsLoading(false);
       setTimeout(() => {
@@ -88,7 +88,7 @@ const ContactForm = () => {
               formData.name ? styles.filled : ""
             }`}
           >
-            <label htmlFor="name">Name</label>
+            <label htmlFor="name">Navn</label>
             <input
               type="text"
               name="name"
@@ -127,7 +127,7 @@ const ContactForm = () => {
               formData.phone ? styles.filled : ""
             }`}
           >
-            <label htmlFor="phone">Phone</label>
+            <label htmlFor="phone">Telefon</label>
             <input
               type="phone"
               name="phone"
@@ -148,7 +148,7 @@ const ContactForm = () => {
             }`}
           >
             <label htmlFor="message" className={styles.messageLabel}>
-              Message
+              Henvendelse
             </label>
             <textarea
               name="message"
@@ -166,7 +166,7 @@ const ContactForm = () => {
               characterCount >= 300 ? styles.characterCountWarning : ""
             }`}
           >
-            Max characters {characterCount}/300
+            Maksimal antall tegn {characterCount}/300
           </p>
         </div>
         <div className={styles.actionContainer}>

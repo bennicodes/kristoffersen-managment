@@ -7,13 +7,13 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.kristoffersenmgmt.no/clients</loc>
+    <loc>https://www.kristoffersenmgmt.no/klienter</loc>
     <lastmod>2025-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.kristoffersenmgmt.no/clients/saul</loc>
+    <loc>https://www.kristoffersenmgmt.no/klienter/saul</loc>
     <lastmod>2025-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -25,13 +25,19 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.kristoffersenmgmt.no/about</loc>
+    <loc>https://www.kristoffersenmgmt.no/presse</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.kristoffersenmgmt.no/om-oss</loc>
     <lastmod>2025-09-18</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.kristoffersenmgmt.no/contact</loc>
+    <loc>https://www.kristoffersenmgmt.no/kontakt</loc>
     <lastmod>2025-09-18</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>

@@ -15,7 +15,7 @@ const Clients = () => {
       </header>
       <div className={styles.container}>
         <main className={styles.main}>
-          <h1 className={styles.title}>Clients</h1>
+          <h1 className={styles.title}>Klienter</h1>
           <div className={styles.grid}>
             {clients.map((client, index) => (
               <div key={index} className={styles.card}>
@@ -40,7 +40,7 @@ const Clients = () => {
                     >
                       Spotify
                     </a>
-                    <Link to={`/clients/${client.slug}`}>See more</Link>
+                    <Link to={`/klienter/${client.slug}`}>Se mer</Link>
                   </div>
                 </div>
                 <h2 className={styles.name}>{client.name}</h2>

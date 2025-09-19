@@ -9,27 +9,27 @@ export default function useContactFormValidation() {
     let newErrors = {};
 
     if (!formData.name.trim()) {
-      newErrors.name = "Please enter your name";
+      newErrors.name = "Vennligst oppgi navnet ditt";
     }
     // ------------------
     if (!formData.email.trim()) {
-      newErrors.email = "Please enter your email";
+      newErrors.email = "Vennligst oppgi e-postadressen din";
     } else if (!emailRegex.test(formData.email.trim())) {
-      newErrors.email = "Invalid email address";
+      newErrors.email = "Ugyldig e-postadresse";
     }
     // ------------------
     if (!formData.phone.trim()) {
-      newErrors.phone = "Please enter your phone number";
+      newErrors.phone = "Vennligst oppgi telefonnummeret ditt";
     } else if (!/^\d+$/.test(formData.phone.trim())) {
-      newErrors.phone = "Please enter a valid phone number";
+      newErrors.phone = "Ugyldig telefonnummer";
     } else if (!phoneRegex.test(formData.phone.trim())) {
-      newErrors.phone = "Phone number must be 8 digits";
+      newErrors.phone = "Telefonnummeret må bestå av 8 siffer";
     }
     // ------------------
     if (!formData.message.trim()) {
-      newErrors.message = "Please enter your message";
+      newErrors.message = "Vennligst skriv inn henvendelsen din";
     } else if (formData.message.trim().length > 300) {
-      newErrors.message = "Message cannot exceed 300 characters";
+      newErrors.message = "Maks 300 tegn";
     }
 
     setErrors(newErrors);
@@ -40,27 +40,25 @@ export default function useContactFormValidation() {
     let message = "";
 
     if (name === "name") {
-      if (!value.trim()) message = "Please enter your name";
+      if (!value.trim()) message = "Vennligst oppgi navnet ditt";
     }
 
     if (name === "email") {
-      if (!value.trim()) message = "Please enter your email";
+      if (!value.trim()) message = "Vennligst oppgi e-postadressen din";
       else if (!emailRegex.test(value.trim()))
-        message = "Invalid email address";
+        message = "Ugyldig e-postadresse";
     }
 
     if (name === "phone") {
-      if (!value.trim()) message = "Please enter your phone number";
-      else if (!/^\d+$/.test(value.trim()))
-        message = "Please enter a valid phone number";
+      if (!value.trim()) message = "Vennligst oppgi telefonnummeret ditt";
+      else if (!/^\d+$/.test(value.trim())) message = "Ugyldig telefonnummer";
       else if (!phoneRegex.test(value.trim()))
-        message = "Phone number must be 8 digits";
+        message = "Telefonnummeret må bestå av 8 siffer";
     }
 
     if (name === "message") {
-      if (!value.trim()) message = "Please enter your message";
-      else if (value.trim().length > 300)
-        message = "Message cannot exceed 300 characters";
+      if (!value.trim()) message = "Vennligst skriv inn henvendelsen din";
+      else if (value.trim().length > 300) message = "Maks 300 tegn";
     }
 
     setErrors((prev) => ({ ...prev, [name]: message }));
