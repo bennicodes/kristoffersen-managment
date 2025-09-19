@@ -11,7 +11,7 @@ const clients = [
       "«Saul er en R&B/rap-artist fra Oslo som startet sin solokarriere i mai 2025 med låten «UTÅLMODIG». Siden har han gitt ut «KRANGLER I PARIS» og «VESTKANTTALK».",
       "Før han begynte å gi ut egen musikk, var han med og skrev låter for Bølgen – blant annet på albumet «Knust Diamant». Låtene han har vært med på å skrive, har til sammen flere millioner streams.",
 
-      "2025 er året hvor Saul bygger opp både musikkatalogen og sitt eget uttrykk som artist. Selv med bare to egne låter ute har han allerede spilt to konserter i løpet av sommeren, noe som tyder på at flere har begynt å legge merke musikken.»",
+      "2025 er året hvor Saul bygger opp både musikkatalogen og sitt eget uttrykk som artist. Selv med bare tre egne låter ute har han allerede spilt to konserter i løpet av sommeren, noe som tyder på at flere har begynt å legge merke til musikken.»",
     ],
   },
   // Later, just add more clients here...
