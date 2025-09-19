@@ -166,7 +166,7 @@ const ContactForm = () => {
               characterCount >= 300 ? styles.characterCountWarning : ""
             }`}
           >
-            Maksimal antall tegn {characterCount}/300
+            Maks antall tegn {characterCount}/300
           </p>
         </div>
         <div className={styles.actionContainer}>
