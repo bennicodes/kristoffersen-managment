@@ -16,7 +16,7 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="tel:+4799999999">+47 915 11 981</a>
+              <a href="tel:+4791511981">+47 915 11 981</a>
             </li>
             <li>Oslo, Norway</li>
           </ul>
