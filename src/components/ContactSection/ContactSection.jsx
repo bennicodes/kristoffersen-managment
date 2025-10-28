@@ -24,7 +24,10 @@ const ContactSection = () => {
                 sebastian@kristoffersenmgmt.no
               </a>
             </li>
-            <li>Mobile: +47 91511981</li>
+            <li>
+              Mobil:
+              <a href="tel:+4791511981"> +47 915 11 981</a>
+            </li>
             <li>
               <a
                 href="https://www.instagram.com/sebastiankristoffersen/"
