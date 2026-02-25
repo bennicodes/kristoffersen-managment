@@ -91,7 +91,7 @@
 .instagramEmbed {
   width: 100%;
   max-width: 425px;
-  min-height: 700px;
+  min-height: 600px;
   border-radius: var(--border-radius-medium);
   background: var(--background-light);
   overflow: hidden;
