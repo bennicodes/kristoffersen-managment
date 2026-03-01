@@ -36,16 +36,30 @@ const AboutIntro = () => {
             Sebastian Kristoffersen ({calculateAge()}) startet sin karriere i
             musikkbransjen i 2025, sammen med sin venn og artist SAUL. Med en
             sterk start signerte han SAUL til Universal Music Group Norway med
-            debutsingelen «UTÅLMODIG», som nå har passert 100 000 avspillinger
+            debutsingelen «UTÅLMODIG», som nå har passert 130 000 avspillinger
             på Spotify.
           </p>
+          <br />
+          <p>
+            I januar 2026 signerte han også artisten MVRLON, som er en up&coming
+            artist med en litt mer leken stil i både flows og ordspill. Våren
+            2026, slipper de en EP sammen som både vil overraske og fange
+            lytterne.
+          </p>
 
-          <h2>Vår artist: SAUL</h2>
+          <h2>Vår artist: SAUL & MVRLON</h2>
           <p>
             SAUL er en norsk Pop/R&amp;B-artist basert i Oslo, kjent for låter
             som <em>UTÅLMODIG</em>, <em>KRANGLER I PARIS</em> og{" "}
-            <em>VESTKANTTALK</em>. 2025 er bare begynnelsen — vi har flere
-            spennende prosjekter på vei i de kommende månedene.
+            <em>VESTKANTTALK</em>. Sterke tekster og en mix mellom sjangere er
+            noe SAUL er veldig god på. I 2026 vil dere få et godt innblikk i
+            dette.
+          </p>
+          <br />
+          <p>
+            MVRLON er en norsk R&B-artist basert i Oslo. 2026 blir hans debutår
+            som soloartist, og man kan forvente mye fete flows og ordspill i de
+            kommende prosjektene de neste månedene.
           </p>
         </div>
 

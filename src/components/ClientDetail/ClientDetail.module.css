@@ -59,11 +59,15 @@
   line-height: 1.6;
 }
 
+
 /* --- Spotify / Insta Embeds --- */
 .spotifyEmbed {
   border-radius: var(--border-radius-medium);
   min-height: 80px;
   min-width: 300px;
+}
+.songPlaceholder p{
+  text-align: center;
 }
 
 .embeds {
