@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import clients from "../../data/clients";
 import Footer from "../Footer/Footer";
@@ -12,6 +12,12 @@ const ClientDetail = () => {
 
   const [spotifyLoading, setSpotifyLoading] = useState(true);
   const [instagramLoading, setInstagramLoading] = useState(true);
+
+  useEffect(() => {
+    if (!client.latestSong) {
+      setSpotifyLoading(false);
+    }
+  }, [client.latestSong, setSpotifyLoading]);
 
   if (!client) {
     return (
@@ -48,16 +54,22 @@ const ClientDetail = () => {
             {spotifyLoading && (
               <Spinner spinnerClassName={styles.loadingCircle} />
             )}
-            <iframe
-              src={client.latestSong}
-              width="100%"
-              height="80"
-              frameBorder="0"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-              onLoad={() => setSpotifyLoading(false)}
-              className={styles.spotifyEmbed}
-            ></iframe>
+            {client.latestSong ? (
+              <iframe
+                src={client.latestSong}
+                width="100%"
+                height="80"
+                frameBorder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+                onLoad={() => setSpotifyLoading(false)}
+                className={styles.spotifyEmbed}
+              ></iframe>
+            ) : (
+              <div className={styles.songPlaceholder}>
+                <p>New music coming soon!</p>
+              </div>
+            )}
           </div>
 
           <div className={styles.rightColumn}>
